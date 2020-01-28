@@ -1,7 +1,7 @@
 ###############################################################################
 ### A script for comparing two 3DXRD outputs 
 ### with respect to a provided reference (e.g. PolyXSim output)
-### M. Kutsal                                                        
+### M. Kutsal, C. Detlefs                                                        
 ### v0.5, October 2019
 ### DTU Physics & ESRF ID06-HXRM                                                
 ###############################################################################                                                        
@@ -42,37 +42,6 @@ try:
 except:
     print(" Usage compare_ubis_3.py [ubi_ref] [par_ref] [ubi_1] [par_1] [ubi_2] [par_2] OR compare_ubis_2.py [gff_ref] [gff_1] [gff_2]")
     sys.exit()
-
-######
-## For testing
-######
-
-#ubi_ref = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data11/simulated.ubi'
-#par_ref = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data11/simulated.par'
-#
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data11/perfect.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data11/perfect.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data11/harvested.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data11/harvested.par'
-#
-#file_format_ubi = True
-#input_gff_ref = 0
-#input_gff_1 = 0
-#input_gff_2 = 0
-
-
-#
-#input_gff_ref="/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_ubis/.gff"
-#input_gff_1="/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_ubis/allaFe_D_70cm_center_px2p93_perfect_gi.gff"
-#input_gff_2="/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_ubis/allaFe_D_70cm_center_px2p93_harvested_gi.gff"
-#file_format_ubi = False
-#
-#gff_ref = cl.columnfile(input_gff_ref)
-#gff_1 = cl.columnfile(input_gff_1)
-#gff_2 = cl.columnfile(input_gff_2)
-
-
 
 
 ###############################################################################
@@ -470,24 +439,6 @@ for keys_1 in grains_1:
             print("#####")
             matched_grains_1_2[ grains_1[keys_1] ] = grains_2[keys_2]
 
-## More testing
-#for keys in matched_grains_ref_1:
-#    print("lists ref & 1")    
-#    print(keys.grainno, matched_grains_ref_1[keys].grainno)
-#    print()
-#    print()
-#
-#for keys in matched_grains_ref_2:
-#    print("lists ref & 2")      
-#    print(keys.grainno, matched_grains_ref_2[keys].grainno)
-#    print()
-#    print()
-#
-#for keys in matched_grains_1_2:
-#    print("lists 1 & 2")      
-#    print(keys.grainno, matched_grains_1_2[keys].grainno)
-#    print()
-#    print()
 
 
 ###############################################################################
@@ -895,12 +846,6 @@ elif dummy_equal == False:
             if min(temp_listttt) == ranking:
                 unmatched_grains_1_2[ grains_1[item_1] ] = grains_2[item_2]            
                 
-    ## More and more testing
-    #for keys in unmatched_grains:
-    #    print(keys.grainno, unmatched_grains[keys].grainno)
-    #    print()
-    #    print()
-    
     U_difference_unmatched_ref_1 =[]
     U_difference_unmatched_ref_2 =[]
     U_difference_unmatched_1_2 =[]

@@ -1,6 +1,6 @@
 ###############################################################################
 ### A script for comparing two 3DXRD outputs.
-### M. Kutsal                                                        
+### M. Kutsal, C. Detlefs                                                       
 ### v0.5, October 2019
 ### DTU Physics & ESRF ID06-HXRM                                                
 ###############################################################################                                                        
@@ -36,83 +36,6 @@ try:
 except:
     print(" Usage compare_ubis_2.py [ubi_1] [par_1] [ubi_2] [par_2] OR compare_ubis_2.py [gff_1] [gff_2]")
     sys.exit()
-
-######
-## For testing
-######
-
-
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data/allaFe_singlegrain_4_omstep_0p1_gi_perfect_ref.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data/allaFe_singlegrain_4_omstep_0p1_gi_perfect.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data/allaFe_singlegrain_4_omstep_0p1_gi_harvested_ref.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data/allaFe_singlegrain_4_omstep_0p1_gi_harvested.par'
-
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data2/allaFe_singlegrain_4_omstep_0p05_gi_perfect_ref.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data2/allaFe_singlegrain_4_omstep_0p05_gi_perfect_ref.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data2/allaFe_singlegrain_4_omstep_0p05_gi_harvested_ref.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data2/allaFe_singlegrain_4_omstep_0p05_gi_harvested_ref.par'
-#
-
-
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data3/allaFe_20_grains_0p1_gi_perfect_ref.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data3/aFe_20_grains_0p1_avgpar.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data3/tmp.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data3/aFe_20_grains_0p1_avgpar.par'
-
-
-#om 0.05
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data4/tmp_per.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data4/per.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data4/tmp_har.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data4/har.par'
-
-##om o.1
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data5/tmp_per.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data5/per.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data5/tmp_har.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data5/har.par'
-
-
-#om o.25
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data6/tmp_per.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data6/per.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data6/tmp_har.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data6/har.par'
-
-#om o.1 two rings
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data7/per.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data7/per.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data7/har.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data7/har.par'
-
-#om o.1 two rings
-#ubi_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data10/perfect.map'
-#par_1 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data10/perfect.par'
-#
-#ubi_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data10/harvested.map'
-#par_2 = '/mntdirect/_data_id06_inhouse/2019/MKutsal/HR_3DXRD_Simulations/compare_ubis/sample_data10/harvested.par'
-#
-#
-#file_format_ubi = True
-#
-#input_gff_1 = 0
-#input_gff_2 = 0
-
-
-#
-#input_gff_1="/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_ubis/allaFe_D_70cm_center_px2p93_perfect_gi.gff"
-#input_gff_2="/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_ubis/allaFe_D_70cm_center_px2p93_harvested_gi.gff"
-#file_format_ubi = False
-#
-#gff_1 = cl.columnfile(in_gff_1)
-#gff_2 = cl.columnfile(in_gff_2)
 
 
 
@@ -270,8 +193,7 @@ class Umatrix(np.ndarray):
     def __new__(cls, val=None):
         ''' 
         Create. If no argument given, create a completely random matrix, 
-        otherwise use argument to initializegff_1 = ubi_to_gff(ubi_1,par_1)
-gff_2 = ubi_to_gff(ubi_2,par_2)
+        otherwise use argument to initialize.
         '''
         if val is None:
             self = np.zeros((3,3), dtype=np.float).view(cls)
@@ -454,11 +376,6 @@ for keys_1 in grains_1:
             print("#####")
             matched_grains[ grains_1[keys_1] ] = grains_2[keys_2]
         
-## More testing
-#for keys in matched_grains:
-#    print(keys.grainno, matched_grains[keys].grainno)
-#    print()
-#    print()
 
 
 ###############################################################################
@@ -660,11 +577,7 @@ for item_1 in unmatched_grains_1:
         if min(temp_listttt) == ranking:
             unmatched_grains[ grains_1[item_1] ] = grains_2[item_2]
 
-## More and more testing
-#for keys in unmatched_grains:
-#    print(keys.grainno, unmatched_grains[keys].grainno)
-#    print()
-#    print()
+
 
 U_difference_unmatched =[]
 
@@ -703,18 +616,14 @@ print("##########################")
 #####
 ## Output
 ##### 
-
 if file_format_ubi == False:
     filename= "Comparison_"+str(input_gff_1.split('/')[-1].split('.')[0])+"_and_"+str(input_gff_2.split('/')[-1].split('.')[0])+".txt"
-   
 elif file_format_ubi == True:
     filename= "Comparison_"+str(ubi_1.split('/')[-1].split('.')[0])+"_and_"+str(ubi_2.split('/')[-1].split('.')[0])+".txt"
-
 f = open(filename,"w")
 f.writelines("Comparison of two grain lists: "+'\n')
 f.writelines(" "+'\n')
 f.writelines("Input files: "+'\n')
-
 if file_format_ubi == True:
     f1="--- "+ubi_1.split('/')[-1]
     f.writelines(f1+'\n')
@@ -729,18 +638,15 @@ elif file_format_ubi == False:
     f2="--- "+input_gff_2.split('/')[-1]
     f.writelines(f2+'\n')
     f.writelines(" "+'\n')
-
 f.writelines("#######################"+'\n')
 f.writelines(" "+'\n')
 f.writelines("Number of grains & number of matched grains"+'\n')
 f.writelines(" "+'\n')
-
 f3="Number of grains in the first flt: "+str(len(gff_1.U11))
 f4="Number of grains in the second flt: "+str(len(gff_1.U11))
 f.writelines(f3+'\n')
 f.writelines(f4+'\n')
 f.writelines(" "+'\n')
-
 f.writelines("Unmatched grains: "+'\n')
 if dummy_equal==True:
     f.writelines("All grains are matched in both grain lists!"+'\n')
@@ -753,15 +659,12 @@ elif dummy_equal==False:
     f.writelines(" "+'\n')
     f.writelines(f6+'\n')
     f.writelines(" "+'\n')
-
 f.writelines("#######################"+'\n')
 f.writelines(" "+'\n')
 f.writelines("U-matrices"+'\n')
 f.writelines(" "+'\n')
 f.writelines(U1+'\n')
 f.writelines(" "+'\n')
-
-
 if file_format_ubi == True:
     f.writelines("Unit cell parameters"+'\n')
     f.writelines(" "+'\n')
@@ -778,10 +681,8 @@ if file_format_ubi == True:
     f.writelines(B6+'\n')
     f.writelines(" "+'\n')
     f.writelines("#######################"+'\n')
-    
 elif file_format_ubi == False:
     pass    
-
 f.writelines("#######################"+'\n')
 f.writelines(" "+'\n')
 f.writelines("Grain CoM positions"+'\n')
@@ -790,7 +691,6 @@ f.writelines(XYZ1+'\n')
 f.writelines(" "+'\n')
 f.writelines("#######################"+'\n')
 f.writelines(" "+'\n')
-
 f.writelines("#######################"+'\n')
 f.writelines(" "+'\n')
 f.writelines("Unmatched grain(s) error on CoM positions and orientation"+'\n')
@@ -801,8 +701,6 @@ f.writelines(XYZ2+'\n')
 f.writelines(" "+'\n')
 f.writelines("#######################"+'\n')
 f.writelines(" "+'\n')
-
-    
 f.close()
 
    

@@ -29,12 +29,6 @@ except:
     print("Usage flt_mining.py [flt_ref] [par_ref] [flt_1] [flt_2]")
     sys.exit()
 
-# For testing...
-#input_flt_ref  = "/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_flts/sample_data1/simulation.flt"
-#input_flt_1    = cl("/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_flts/sample_data1/perfect.flt.new")
-#input_flt_2    = cl("/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_flts/sample_data1/harvested.flt.new")
-#
-#input_par_ref  = "/users/kutsal/Desktop/MKutsal/HR_3DXRD_Simulations/compare_flts/sample_data1/det_z_m3px_.par"
 
 class mypeak:
     ''' peak entry having its detector-y (px), detector-z (px), omega (deg) positions, g-vector, hkl and intensity information'''
@@ -135,7 +129,14 @@ for k in range(len(input_flt_2.sc)):
     peak_temp  =  mypeak(detector_y_temp,detector_z_temp,omega_temp,num_of_px_temp,avg_intensity_temp,sum_intensity_temp,gx_temp,gy_temp,gz_temp,h_temp, k_temp, l_temp, hr_temp,kr_temp,lr_temp,peak_name_temp)
     flt_2[peak_name_temp]  =  peak_temp
 
+#####
 ##Dictionary holding the matched peaks
+#####
+## Peak matching is done via their positions on the detector, whereas it can 
+## also be done via matching the squared magnitude of the g-vectors. In order 
+## to switch between these, please put off the comment for the relevant one.
+#####
+
 matched_peaks_ref_1 = {}
 matched_peaks_ref_2 = {}
 matched_peaks_1_2 = {}
@@ -168,11 +169,6 @@ for keys_1 in flt_1:
             matched_peaks_1_2[ flt_1[keys_1] ] = flt_2[keys_2]
 
 
-# For testing...   
-#for keys in matched_peaks:
-#    print(keys.spot3d_id, matched_peaks[keys].spot3d_id)
-#    print()
-#    print()
 
 
 
