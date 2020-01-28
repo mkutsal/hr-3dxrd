@@ -1,4 +1,4 @@
-# hr-3dxrd
+# HR-3DXRD
 ImageD11 and pyFAI-based py scripts for High Resolution 3DXRD
 
 A simulation package for verification and realization of an enhaced spatial resolution 
