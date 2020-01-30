@@ -2,7 +2,7 @@
 ### A script for comparing two 3DXRD outputs 
 ### with respect to a provided reference (e.g. PolyXSim output)
 ### M. Kutsal, C. Detlefs                                                        
-### v0.5, October 2019
+### v0.75, October 2019
 ### DTU Physics & ESRF ID06-HXRM                                                
 ###############################################################################                                                        
 
@@ -40,7 +40,7 @@ try:
         input_gff_2 = sys.argv[3]
         file_format_ubi = False
 except:
-    print(" Usage compare_ubis_3.py [ubi_ref] [par_ref] [ubi_1] [par_1] [ubi_2] [par_2] OR compare_ubis_2.py [gff_ref] [gff_1] [gff_2]")
+    print(" Usage compare_ubis_3.py [ubi_ref] [par_ref] [ubi_1] [par_1] [ubi_2] [par_2] OR compare_ubis_3.py [gff_ref] [gff_1] [gff_2]")
     sys.exit()
 
 
